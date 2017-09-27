@@ -1,20 +1,13 @@
 <meta http-equiv="refresh" content="10; url=https://itunes.apple.com/us/app/vpn-by-nordvpn-unlimited-privacy-security-vpn/id905953485?mt=8" />
   <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script> -->
 <script>
-    var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
-
-copyTextareaBtn.addEventListener('click', function(event) {
-  var copyTextarea = document.querySelector('.js-copytextarea');
-  copyTextarea.select();
-
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-});
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 </script>
 
 
@@ -27,7 +20,7 @@ copyTextareaBtn.addEventListener('click', function(event) {
   
 <h3>
   <p>
-  <button class="js-textareacopybtn" style="horizontal-align:center;">Tap to Copy</button>
+  <button copyToClipboard('Z^bk,rV9swgei$i3iEb4jNsbpEh2MM') class="js-textareacopybtn" style="horizontal-align:center;">Tap to Copy</button>
  <br></br>
   <textarea class="js-copytextarea">Z^bk,rV9swgei$i3iEb4jNsbpEh2MM</textarea>
 </p>
