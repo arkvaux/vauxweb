@@ -11,4 +11,3 @@
 3. [Raspberry Pi](https://nordvpn.com/tutorials/raspberry-pi/)
 
 4. [Linux](https://nordvpn.com/tutorials/linux/)
-
